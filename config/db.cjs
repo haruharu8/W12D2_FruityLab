@@ -3,6 +3,17 @@
 
 const mongoose = require('mongoose');
 
-let connectionString = `mongodb+srv://cynthia:${process.env.MONGO_PASS}@freebieasure0.sfqxjtq.mongodb.net/?retryWrites=true&w=majority`
+const password = process.env.MONGO_PASS; // required dotenv module
 
-mongoose.connect()
+let connectionString = `mongodb+srv://cynthia:${process.env.MONGO_PASS}@freebieasure0.sfqxjtq.mongodb.net/Food?retryWrites=true&w=majority`
+
+mongoose.connect(connectionString, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
+
+// log when connected
+
+mongoose.connection.once('open', ()=> {
+    console.log('connected to mongo');
+  });
