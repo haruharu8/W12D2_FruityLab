@@ -5,6 +5,24 @@
   text-align: center;
 }
 
+body {
+  background-color: blanchedalmond;
+}
+
+.purple-button {
+  background-color: rgb(196, 97, 196);
+  color: white; /* Text color is white to make it visible on the purple background */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border: none; /* Remove the default button border */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 4px; /* Add some border-radius for rounded corners */
+}
+
+.purple-button:hover {
+  background-color: pink;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -12,18 +12,19 @@ function App() {
   return (
     <>
     <nav>
-      <Link to="/">
-        <button>Home</button> 
-      </Link>
-      <Link to="/create">
-        <button>Create Fruit </button>
-      </Link>
-      <Link to="/veggies">
-        <button>Veggies</button> 
-      </Link>
-      <Link to="/veggies/create">
-        <button>Create New Veggie</button>
-      </Link>
+    <Link to="/">
+      <button className="purple-button">Home</button>
+    </Link>
+    <Link to="/create">
+      <button className="purple-button">Create Fruit</button>
+    </Link>
+    <Link to="/veggies">
+      <button className="purple-button">Veggies</button>
+    </Link>
+    <Link to="/veggies/create">
+      <button className="purple-button">Create New Veggie</button>
+</Link>
+
     </nav>
 
     <Routes>
