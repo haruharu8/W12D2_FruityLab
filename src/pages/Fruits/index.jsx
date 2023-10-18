@@ -8,7 +8,7 @@ const Fruits = () => {
     useEffect(()=>{
       axios({
           method: "GET",
-          url: "http://localhost:3000/fruits",
+          url: "/fruits",
       }).then((res)=>{
         console.log(res.data);
           setFruits(res.data);
@@ -27,6 +27,7 @@ console.log(fruits);
                 <li key={fruit.name}>
                 <p>{fruit.name}</p>
                 <p>{fruit.color}</p>
+                <p>{fruit.age}</p>
                 <p>{fruit.readyToEat}</p>
             </li>
         )})}

@@ -6,7 +6,7 @@ const morgan = require('morgan')
 const PORT = 3000;
 const app = express();
 
-const Fruit = require('./models/Fruit.cjs')
+const Fruit = require('./models/fruit.cjs')
 
 
 // allows us to use process.env (get variables from .env file)
