@@ -6,6 +6,7 @@ const morgan = require('morgan')
 const PORT = 3000;
 const app = express();
 
+const Veggie = require('./models/Veggie.cjs')
 const Fruit = require('./models/fruit.cjs')
 
 
@@ -50,6 +51,11 @@ app.post("/fruits", async (req,res) => {
     res.send("Route is good")
 })
 
+app.post("/veggies", async (req, res) => {
+    // make veggie model
+    let dbResponse = await Veggie.create(req.body)
+    res.status(201).send(dbResponse)
+})
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
