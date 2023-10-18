@@ -51,6 +51,11 @@ app.post("/fruits", async (req,res) => {
     res.send("Route is good")
 })
 
+app.get('/veggies', async (req, res) => {
+    let veggiesFromDB = await Veggie.find()
+    res.send(veggiesFromDB)
+})
+
 app.post("/veggies", async (req, res) => {
     // make veggie model
     let dbResponse = await Veggie.create(req.body)
